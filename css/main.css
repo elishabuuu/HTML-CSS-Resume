@@ -18,7 +18,7 @@
 	url('../fonts/webfonts/32E610_0_0.woff') format('woff'),
 	url('../fonts/webfonts/32E610_0_0.ttf') format('truetype');
 }
- 
+
 @font-face {
 	/*UniSans*/
 	font-family: 'uni_sansthin_caps';
@@ -65,7 +65,7 @@ a:hover {
 .menu_button {
 	font-family: 'uni_sansthin_caps';
 	text-decoration:none;
-	padding-top: 0px;	
+	padding-top: 0px;
 	overflow: auto;
 	width: 1000px;
 	margin: auto;
@@ -218,7 +218,7 @@ aside.short_description {
 
 .resume-body {
 	background-image: url(../images/sam1.png);
-	background-position: 0 0;
+	background-position: center;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -254,7 +254,6 @@ aside.short_description {
 .resume-body > .resume-content > *:nth-child(4), .resume-body > .resume-content > *:nth-child(7) {
 	margin-top: 3rem;
 }
-
 
 .name_designation {
 	color: #ffb400;
@@ -331,11 +330,15 @@ tbody {
 tbody > tr:nth-child(odd) {
 	background-color: rgba(0,0,0,0.3);
 }
-
+tbody > tr:nth-child(odd):hover {
+	background-color: rgba(0,0,0,0.6);
+}
 tbody > tr:nth-child(even) {
 	background-color: rgba(0,0,0,0.2);
 }
-
+tbody > tr:nth-child(even):hover {
+	background-color: rgba(0,0,0,0.5);
+}
 th, td {
 	padding: 1em;
 }
@@ -374,19 +377,23 @@ form > input {
 	float: right;
 	padding: 1.0rem;
 	min-width: 60%;
-	font-size: 1.5rem;
+	font-size: 1.0rem;
 	line-height: 1rem;
 }
-
+form > input[type=text]:focus, input[type=email]:focus, textarea:focus {
+	box-shadow: 0 0 5px rgba(255, 180, 0, 1);
+  border: 1px solid rgba(255, 180, 0, 1);
+	color: #fff;
+	background-color: #161616;
+}
 form > textarea {
 	float: right;
-	font-size: 1.5rem;
+	font-size: 1.0rem;
 	line-height: 1rem;
 	border-width: 2px;
 	padding: 1.0rem;
 	width: 60%;
 	height: 200px;
-
 }
 
 #submit_button, #reset_button{
@@ -413,4 +420,3 @@ form > textarea {
 		height: auto;
 	}
 }
-
