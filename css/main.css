@@ -18,7 +18,7 @@
 	url('../fonts/webfonts/32E610_0_0.woff') format('woff'),
 	url('../fonts/webfonts/32E610_0_0.ttf') format('truetype');
 }
- 
+
 @font-face {
 	/*UniSans*/
 	font-family: 'uni_sansthin_caps';
@@ -38,9 +38,12 @@
 	transition-duration: .3s;
 }
 
+html {
+	font-size: 16px;
+}
+
 body {
 	/*background-image: url(http://i61.tinypic.com/2zycvaq.png);*/
-	font-size: 16px;
 	font-family: 'uni_sansthin_caps', 'Segoe UI';
 	background-color:#202020;
 }
@@ -65,7 +68,7 @@ a:hover {
 .menu_button {
 	font-family: 'uni_sansthin_caps';
 	text-decoration:none;
-	padding-top: 0px;	
+	padding-top: 0px;
 	overflow: auto;
 	width: 1000px;
 	margin: auto;
@@ -108,7 +111,7 @@ a:hover {
 	background-position: 0 0;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
-	height: calc(100vh - 284px);
+	/* height: calc(100vh - 284px); */
 }
 
 header, section, footer, nav {
@@ -118,26 +121,30 @@ header, section, footer, nav {
 
 
 .full_name {
-	background-image: url("../images/diamond.png");
-	background-repeat: no-repeat;
-	background-size: 67%;
-	background-position: 82px 69px;
-	font-size: 1250%;
-	font-weight: normal;
-	font-family: 'sketch_gothic_schoolregular';
-	float: left;
-	margin-left: 100px;
-	margin-top: 20px;
+    background-image: url("../images/diamond.png");
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: 0px 300px;
+    font-size: 1250%;
+    font-weight: normal;
+    font-family: "Voga-Medium";
+    float: left;
+    margin-left: 100px;
+    margin-top: 20px;
 }
 
+
 #firstName {
-	color:white;
+	color: rgb(199, 0, 57);
+    font-size: 150%;
 }
 
 #lastName {
 	color: #ffb400;
-	margin-left: 60px;
+	text-shadow: 0px 0px 15px rgb(199, 0, 57);
+	margin-left: 190px;
 	margin-top: -70px;
+
 }
 
 aside.short_description {
@@ -168,12 +175,13 @@ aside.short_description {
 	padding: 1.5em;
 	clear: both;
 	height: auto;
-	font: 1em 'uni_sansthin_caps';
+	font-family: 'uni_sansthin_caps';
+	font-size: 1rem;
 	color: white;
 	background-color: #161616;
 	text-align:left;
 	border-top: 1px solid #979797;
-	overflow: auto;
+	 overflow: auto; 
 	position: initial;
 	bottom: 0px;
 }
@@ -218,7 +226,7 @@ aside.short_description {
 
 .resume-body {
 	background-image: url(../images/sam1.png);
-	background-position: 0 0;
+	background-position: center;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -235,7 +243,7 @@ aside.short_description {
 
 #headline > span {
 	color: #ffb400;
-		text-shadow: 0px 0px 15px rgb(199, 0, 57);
+	text-shadow: 0px 0px 15px rgb(199, 0, 57);
 }
 
 .resume-body > .resume-content > * {
@@ -255,7 +263,6 @@ aside.short_description {
 	margin-top: 3rem;
 }
 
-
 .name_designation {
 	color: #ffb400;
 	padding: 2rem;
@@ -264,6 +271,14 @@ aside.short_description {
 	display: block;
 	font-size: 1.7rem;
 	position: relative;
+}
+
+.name_designation > h2 {
+	font-size: 1.7rem;
+}
+
+.name_designation > p {
+	font-size: 1.7rem;
 }
 
 .personal_details {
@@ -276,6 +291,7 @@ aside.short_description {
 	display: block;
 	position: relative;
 }
+
 
 #profile {
 	transition-duration: .5s;
@@ -318,7 +334,7 @@ table {
 	color: #fff;
 	border-spacing: 0px;
 	background-color: rgba(199, 0, 57, .5);
-	min-width: calc(600px + 2rem + 2rem);
+	width:100%;
 }
 
 thead {
@@ -326,20 +342,25 @@ thead {
 }
 
 tbody {
+	text-align: center;
+	word-break: break-all;
 }
 
 tbody > tr:nth-child(odd) {
 	background-color: rgba(0,0,0,0.3);
 }
-
+tbody > tr:nth-child(odd):hover {
+	background-color: rgba(0,0,0,0.6);
+}
 tbody > tr:nth-child(even) {
 	background-color: rgba(0,0,0,0.2);
 }
-
+tbody > tr:nth-child(even):hover {
+	background-color: rgba(0,0,0,0.5);
+}
 th, td {
 	padding: 1em;
 }
-
 
 #language tr > td:nth-child(even) {
 	text-align: center;
@@ -358,6 +379,7 @@ form {
 	min-width: 500px;
 	overflow: auto;
 }
+
 form > * {
 	margin-bottom: 1rem;
 }
@@ -369,24 +391,31 @@ form > label {
 	clear:left;
 	font-size: 1.5rem;
 	line-height: 4rem;
+
 }
+
 form > input {
 	float: right;
 	padding: 1.0rem;
 	min-width: 60%;
-	font-size: 1.5rem;
+	font-size: 1.0rem;
 	line-height: 1rem;
 }
-
+form > input[type=text]:focus, input[type=email]:focus, textarea:focus {
+	box-shadow: 0 0 5px rgba(255, 180, 0, 1);
+  	border: 1px solid rgba(255, 180, 0, 1);
+	color: #fff;
+	background-color: #3c0816;
+}
 form > textarea {
 	float: right;
-	font-size: 1.5rem;
+	font-size: 1.0rem;
 	line-height: 1rem;
 	border-width: 2px;
 	padding: 1.0rem;
 	width: 60%;
 	height: 200px;
-
+	resize:none;
 }
 
 #submit_button, #reset_button{
@@ -412,5 +441,147 @@ form > textarea {
 	#content {
 		height: auto;
 	}
+
+	html {
+		font-size: 14px;
+	}
+		#footer {
+		font-size:0.4rem;
+	}
 }
 
+
+@media only screen and (max-width: 700px),
+(max-device-width: 768px) {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block;
+		font-size:1rem;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+
+	}
+	
+	tr { 
+		border: 1px solid #3c0816;
+	}
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		position: relative;
+		padding-left: 50%; 
+		font-size: 10px
+
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		vertical-align : middle;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+
+	}
+	
+	/*
+	Label the data
+	*/
+	#education td:nth-of-type(1):before { 
+		content: "Education"; 
+		text-align: center; 
+		font-weight: bold;
+	}
+	#education td:nth-of-type(2):before { 
+		content: "Year"; 
+		text-align: center; 
+		font-weight: bold;
+	}
+	#language td:nth-of-type(1):before { 
+		content: "Languages";
+		text-align: center;
+		font-weight: bold;
+	}
+	#language td:nth-of-type(2):before { 
+		content: "Fluent Level";
+		text-align: center;
+		font-weight: bold;
+	}
+	#skills td:nth-of-type(1):before { 
+		content: "Skills";
+		text-align: center;
+	}
+	#skills td:nth-of-type(2):before { 
+		content: "Years Of Experience";
+		text-align: center;
+	}
+	#skills td:nth-of-type(3):before { 
+		content: "Field";
+		text-align: center;
+	}
+	#education {
+		padding-bottom: 2rem;
+	}
+	#language {
+		padding-bottom: 2rem;
+	}
+	#skills {
+		padding-bottom: 2rem;
+	}
+
+}
+
+@media only screen and (max-width:1300px), (min-width: 700px) and
+(min-device-width: 768px)
+{
+	#c_form {
+		width: 55%;
+	}
+	input[type=text] {
+		padding: 15px;
+		display: inline-block;
+		font-size: 12px;
+	}
+	input[type=email]{
+		padding: 15px;
+		display: inline-block;
+		font-size: 12px
+	}
+	textarea {
+		width:50%;
+		padding: 15px;
+		display:inline-block;
+		resize:none;
+	}
+	input[type=submit]
+	{
+		margin-bottom: 20px;
+		padding: 15px;
+	}	
+
+	input[type=reset]
+	{
+		margin-bottom: 20px;
+		padding: 15px;
+	}	
+
+	#contact-form {
+		min-width: 50%;
+		min-height: 70%;
+	}
+	#contact-form > label {
+		padding-top: 2rem;
+		font-size: 1rem;
+		line-height: 0;
+		vertical-align: middle;
+		clear: both;
+	}
