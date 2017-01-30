@@ -39,3 +39,9 @@
     background-color: green;
   }
 }
+@media (max-width: 575px) {
+  .section-one, .section-two {
+    width: 90%;
+    font-size: 32px;
+  }
+}
