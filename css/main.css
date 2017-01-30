@@ -1,0 +1,592 @@
+@-ms-viewport{
+  width: device-width;
+}
+@viewport{
+  width: device-width;
+}
+@font-face {
+	/*Sketch Gothic*/
+	font-family: 'sketch_gothic_schoolregular';
+	src: url('../fonts/sketch_gothic_school-webfont.eot');
+	src: url('../fonts/sketch_gothic_school-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/sketch_gothic_school-webfont.woff') format('woff'),
+		 url('../fonts/sketch_gothic_school-webfont.ttf') format('truetype'),
+		 url('../fonts/sketch_gothic_school-webfont.svg#sketch_gothic_schoolregular') format('svg');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Voga-Medium';
+	src: url('../fonts/webfonts/32E610_0_0.eot');
+	src: url('../fonts/webfonts/32E610_0_0.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/webfonts/32E610_0_0.woff2')
+	format('woff2'),
+	url('../fonts/webfonts/32E610_0_0.woff') format('woff'),
+	url('../fonts/webfonts/32E610_0_0.ttf') format('truetype');
+}
+
+@font-face {
+	/*UniSans*/
+	font-family: 'uni_sansthin_caps';
+	src: url('../fonts/uni_sans_thin-webfont.eot');
+	src: url('../fonts/uni_sans_thin-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/uni_sans_thin-webfont.woff') format('woff'),
+		 url('../fonts/uni_sans_thin-webfont.ttf') format('truetype'),
+		 url('../fonts/uni_sans_thin-webfont.svg#uni_sansthin_caps') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+* {
+	margin:0px;
+	padding:0px;
+	transition-duration: .3s;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	/*background-image: url(http://i61.tinypic.com/2zycvaq.png);*/
+	font-family: 'uni_sansthin_caps', 'Segoe UI';
+	background-color:#202020;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+#top_menu {
+	height: 6rem;
+	background-color: #161616;
+	margin: 0px auto;
+	position:relative;
+	border-bottom: 1px solid black;
+	width: 100%;
+}
+
+.menu_button {
+	font-family: 'uni_sansthin_caps';
+	text-decoration:none;
+	padding-top: 0px;
+	overflow: auto;
+	margin: auto;
+	width: 80%;
+}
+.menu_button > li {
+	float: left;
+	list-style-type: none;
+}
+
+.menu_button > li > a {
+	text-decoration: none;
+	text-align: center;
+	font-size: 2rem;
+	line-height: 6rem;
+	vertical-align: middle;
+	color: rgba(255,255,255,0.8);
+	border-right: 1px solid #3e3e3d;
+	padding: 0px 5vw;
+	display: inline-block;
+}
+
+.menu_button > li.active > a {
+	color: rgb(199, 0, 57);
+}
+
+.menu_button > div:last-child {
+	border-right: 0px;
+}
+
+.menu_button > li > a:hover {
+	transition: 0.5s;
+	background: #4f4f4f;
+	opacity:0.8;
+	color:#f62292;
+	cursor:pointer;
+}
+
+#content {
+	background-image: url(../images/sam1.png);
+	background-position: 0 0;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	/* height: calc(100vh - 284px); */
+}
+
+header, section, footer, nav {
+	display:block;
+}
+
+
+
+.full_name {
+	background-image: url("../images/diamond.png");
+	background-repeat: no-repeat;
+	background-size: 30%;
+	background-position: 0px 18vw;
+	font-weight: normal;
+	font-family: "Voga-Medium";
+	float: left;
+	margin-left: 100px;
+	margin-top: 20px;
+}
+
+
+#firstName {
+	color: rgb(199, 0, 57);
+	font-size: 20vw;
+}
+
+#lastName {
+	color: #ffb400;
+	font-size: 15vw;
+	text-shadow: 0px 0px 15px rgb(199, 0, 57);
+	margin-left: 10vw;
+	margin-top: -8vw;
+
+}
+
+aside.short_description {
+	font-family: 'uni_sansthin_caps';
+	font-size: 8vw;
+	color: gray;
+	float: left;
+	margin-left: 20vw;
+	clear: both;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.pink {
+	color: #ff52ae;
+}
+.darkyellow {
+	color: #ffb400;
+}
+.red {
+	color: red;
+}
+.purplepink {
+	color: #801F52;
+}
+
+#footer {
+	padding: 1.5em;
+	clear: both;
+	height: auto;
+	font-family: 'uni_sansthin_caps';
+	font-size: 1rem;
+	color: white;
+	background-color: #161616;
+	text-align:left;
+	border-top: 1px solid #979797;
+	 overflow: auto; 
+	position: initial;
+	bottom: 0px;
+}
+
+#footer #footer-copyright {
+	text-align: right;
+}
+
+#footer .social {
+	font-size: 34px;
+	color: #f62292;
+	font-family: 'uni_sansthin_caps';
+	display:block;
+	margin: auto;
+	width: 400px;
+	text-align: center;
+}
+
+.socicons {
+	margin-left:2px;
+}
+
+.socicons > a {
+	transition:1s;
+	display: inline-block;
+	padding: 1rem;
+}
+
+.socicons > a > img:hover{
+	color: #ff52ae;
+	cursor:pointer;
+	opacity:0.8;
+}
+
+.clearfix {
+	clear: both;
+}
+
+
+/* resume css */
+
+
+.resume-body {
+	background-image: url(../images/sam1.png);
+	background-position: center;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#headline{
+	font-family: 'Voga-Medium';
+	font-size: 10rem;
+	line-height: 100px;
+	padding: 2rem;
+	padding-left: 3rem;
+	color: rgb(199, 0, 57);
+}
+
+#headline > span {
+	color: #ffb400;
+	text-shadow: 0px 0px 15px rgb(199, 0, 57);
+}
+
+.resume-body > .resume-content > * {
+	max-width: 600px;
+	margin: 0.1rem 3rem 0.1rem 3rem;
+}
+
+.resume-body > .resume-content > *:first-child {
+	margin-top : 3rem;
+}
+
+.resume-body > .resume-content > *:last-child {
+
+}
+
+.resume-body > .resume-content > *:nth-child(4), .resume-body > .resume-content > *:nth-child(7) {
+	margin-top: 3rem;
+}
+
+.name_designation {
+	color: #ffb400;
+	padding: 2rem;
+	background-color: rgba(199, 0, 57, .5);
+	border-radius: 2px;
+	display: block;
+	font-size: 1.7rem;
+	position: relative;
+}
+
+.name_designation > h2 {
+	font-size: 1.7rem;
+}
+
+.name_designation > p {
+	font-size: 1.7rem;
+}
+
+.personal_details {
+	color: #fff;
+	font-weight: bold;
+	background-color: rgba(199, 0, 57, .5);
+	padding: 2rem;
+	font-size:1.2rem;
+	border-radius: 2px;
+	display: block;
+	position: relative;
+}
+
+
+#profile {
+	transition-duration: .5s;
+	background-color: rgba(199, 0, 57, .5);
+	padding: 2rem;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 2rem;
+	color:#fff;
+	position: relative;
+	text-transform: uppercase;
+	transform: skew(-10deg) rotate(-3deg);
+}
+
+#profile:hover {
+	transform: skew(-12deg) rotate(-5deg);
+	cursor: default;
+}
+
+#profile:before, #profile:after {
+	font-size: 10rem;
+	line-height: 0;
+	display: block;
+	position: absolute;
+}
+
+#profile:before {
+	content: "“";
+	left: -2rem;
+	top: 3rem;
+}
+
+#profile:after {
+	content: "”";
+	right: -2rem;
+	bottom: -3rem;
+}
+
+table {
+	color: #fff;
+	border-spacing: 0px;
+	background-color: rgba(199, 0, 57, .5);
+	width:100%;
+}
+
+thead {
+	color: #ffb400;
+}
+
+tbody {
+	text-align: center;
+	word-break: break-all;
+}
+
+tbody > tr:nth-child(odd) {
+	background-color: rgba(0,0,0,0.3);
+}
+tbody > tr:nth-child(odd):hover {
+	background-color: rgba(0,0,0,0.6);
+}
+tbody > tr:nth-child(even) {
+	background-color: rgba(0,0,0,0.2);
+}
+tbody > tr:nth-child(even):hover {
+	background-color: rgba(0,0,0,0.5);
+}
+th, td {
+	padding: 1em;
+}
+
+#language tr > td:nth-child(even) {
+	text-align: center;
+}
+
+#skills tr > td:nth-child(2) {
+	text-align: center;
+}
+
+form {
+	background-color: rgba(199, 0, 57, .5);
+	padding: 2rem;
+	font-size: 1rem;
+	color: #fff;
+	position: relative;
+	min-width: 500px;
+	overflow: auto;
+}
+
+form > * {
+	margin-bottom: 1rem;
+}
+
+form > label {
+	float: left;
+	display: inline-block;
+	min-width: 30%;
+	clear:left;
+	font-size: 1.5rem;
+	line-height: 4rem;
+
+}
+
+form > input {
+	float: right;
+	padding: 1.0rem;
+	min-width: 60%;
+	font-size: 1.0rem;
+	line-height: 1rem;
+}
+form > input[type=text]:focus, input[type=email]:focus, textarea:focus {
+	box-shadow: 0 0 5px rgba(255, 180, 0, 1);
+	border: 1px solid rgba(255, 180, 0, 1);
+	color: #fff;
+	background-color: #3c0816;
+}
+form > textarea {
+	float: right;
+	font-size: 1.0rem;
+	line-height: 1rem;
+	border-width: 2px;
+	padding: 1.0rem;
+	width: 60%;
+	height: 200px;
+	resize:none;
+}
+
+#submit_button, #reset_button{
+	float: right;
+	padding: 1rem 2rem 1rem 2rem;
+	border: none;
+	background-color: #ffb400;
+	color: #000;
+	font-family:'uni_sansthin_caps';
+	font-weight: bold;
+}
+
+#reset_button{
+	background-color: rgba(255, 180, 0, 0.6);
+}
+
+#submit_button:hover, #reset_button:hover {
+	background-color: rgba(255, 222, 110, 1);
+}
+
+
+@media screen and (max-width: 1300px) {
+	#content {
+		height: auto;
+	}
+
+	html {
+		font-size: 14px;
+	}
+		#footer {
+		font-size:0.4rem;
+	}
+}
+
+
+@media only screen and (max-width: 700px),
+(max-device-width: 768px) {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block;
+		font-size:1rem;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+
+	}
+	
+	tr { 
+		border: 1px solid #3c0816;
+	}
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		position: relative;
+		padding-left: 50%; 
+		font-size: 10px
+
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		vertical-align : middle;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+
+	}
+	
+	/*
+	Label the data
+	*/
+	#education td:nth-of-type(1):before { 
+		content: "Education"; 
+		text-align: center; 
+		font-weight: bold;
+	}
+	#education td:nth-of-type(2):before { 
+		content: "Year"; 
+		text-align: center; 
+		font-weight: bold;
+	}
+	#language td:nth-of-type(1):before { 
+		content: "Languages";
+		text-align: center;
+		font-weight: bold;
+	}
+	#language td:nth-of-type(2):before { 
+		content: "Fluent Level";
+		text-align: center;
+		font-weight: bold;
+	}
+	#skills td:nth-of-type(1):before { 
+		content: "Skills";
+		text-align: center;
+	}
+	#skills td:nth-of-type(2):before { 
+		content: "Years Of Experience";
+		text-align: center;
+	}
+	#skills td:nth-of-type(3):before { 
+		content: "Field";
+		text-align: center;
+	}
+	#education {
+		padding-bottom: 2rem;
+	}
+	#language {
+		padding-bottom: 2rem;
+	}
+	#skills {
+		padding-bottom: 2rem;
+	}
+
+}
+
+@media only screen and (max-width:1300px), (min-width: 700px) and
+(min-device-width: 768px)
+{
+	input[type=text] {
+		padding: 15px;
+		display: inline-block;
+		font-size: 12px;
+	}
+	input[type=email]{
+		padding: 15px;
+		display: inline-block;
+		font-size: 12px
+	}
+	textarea {
+		width:50%;
+		padding: 15px;
+		display:inline-block;
+		resize:none;
+	}
+	input[type=submit]
+	{
+		margin-bottom: 20px;
+		padding: 15px;
+	}	
+
+	input[type=reset]
+	{
+		margin-bottom: 20px;
+		padding: 15px;
+	}	
+
+	#contact-form {
+		min-width: 50%;
+		min-height: 70%;
+	}
+	#contact-form > label {
+		padding-top: 2rem;
+		font-size: 1rem;
+		line-height: 0;
+		vertical-align: middle;
+		clear: both;
+	}
+}
