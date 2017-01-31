@@ -119,6 +119,7 @@ a:hover {
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	/* height: calc(100vh - 284px); */
+	min-height:100%;
 }
 
 header, section, footer, nav {
