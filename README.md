@@ -1,3 +1,13 @@
+HTML CSS Resume by Samina Hossain 1421163
+Theme of this will be available soon.
+
+A basic example on working with HTML/CSS and how it correlates to make the front-end of a webpage look sleek, simple or even just great.
+
+
+--------------------------------------------------
+
+
+
 # HTML-CSS-Resume
 ##### Build your own online resume!
 
